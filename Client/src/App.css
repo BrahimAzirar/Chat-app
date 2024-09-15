@@ -1,0 +1,282 @@
+#LoginForm, #SignUpForm, #AccountPage, #ForgotPasswordPage, #verifyEmail {
+    height: 100vh;
+    background-color: #C95EEE;
+    position: relative;
+}
+
+#LoginForm > form, #SignUpForm > form, #ForgotPasswordPage > form,
+#verifyEmail > div {
+    max-width: 400px !important;
+    height: 400px;
+    border-radius: 10px;
+    background: #FDFDFD;
+    box-shadow: 0px 0px 20px 0px rgba(88, 88, 88, 0.85);
+}
+
+#AccountPage > div:first-child {
+    width: 750px !important;
+    height: 600px;
+    border-radius: 10px;
+    background: #FDFDFD;
+    box-shadow: 0px 0px 20px 0px rgba(88, 88, 88, 0.85);
+}
+
+#SignUpForm > form {
+    max-width: 500px !important;
+}
+
+#ForgotPasswordPage > form {
+    height: fit-content !important;
+}
+
+#verifyEmail > div {
+    max-width: 450px !important;
+    height: fit-content;
+}
+
+#LoginForm > form img, #SignUpForm > form img {
+    width: 85px;
+}
+
+#ForgotPasswordPage > form img {
+    width: 75px;
+}
+
+#LoginForm > form label, #SignUpForm > form label,
+#ForgotPasswordPage > form label {
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.85);
+}
+
+#LoginForm > form input, #SignUpForm > form input,
+#ForgotPasswordPage > form input {
+    border-radius: 7px;
+    border: 2px solid #C95EEE;
+    background: rgba(201, 94, 238, 0.06);
+    color: rgba(0, 0, 0, 0.85);
+}
+
+#LoginForm > form input:focus, #SignUpForm > form input:focus,
+#ForgotPasswordPage > form input:focus {
+    box-shadow: none;
+    background: none;
+}
+
+#LoginForm > form button, #SignUpForm > form button,
+#ForgotPasswordPage > form button {
+    background-color: #C95EEE;
+    color: #FFFFFF;
+    height: fit-content;
+    font-weight: bold;
+}
+
+#LoginForm > form button:active, #SignUpForm > form button:active,
+#ForgotPasswordPage > form button:active
+{ background-color: #ca5eeed4; }
+
+#ToSignUpPage, #ToForgotPasswordPage {
+    color: #C95EEE;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#ToSignUpPage:hover, #ToForgotPasswordPage:hover {
+    text-decoration: underline;
+}
+
+#SignUpForm form > div:not(:first-of-type, :last-of-type) {
+    height: fit-content !important;
+}
+
+#SignUpForm form > div:last-of-type {
+    margin-top: 10px;
+}
+
+#NavBar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#NavBar {
+    background-color: #faedfe;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#NavBar ul li { width: fit-content; }
+
+#NavBar ul li:first-of-type img {
+    width: 70px;
+}
+
+#NavBar ul li:not(:first-of-type) img {
+    width: 35px;
+}
+
+#NavBar ul li:not(:first-of-type, :last-of-type) img:hover {
+    opacity: .5;
+}
+
+.HideComponents {
+    display: none;
+}
+
+#Account-Content > div:first-of-type:not(#ChatContent) {
+    width: 60%;
+    padding: 7px;
+    margin: 12px auto 0 auto;
+    display: flex;
+    align-items: center;
+    border: 2px solid #C95EEE;
+    border-radius: 7px;
+}
+
+#Account-Content > div:first-of-type input {
+    border: none;
+    width: 100%;
+    height: 100%;
+    color: #C95EEE;
+    text-indent: 5px;
+}
+
+#Account-Content > div:first-of-type input:focus {
+    outline: none;
+}
+
+#Account-Content > div:first-of-type input::placeholder {
+    color: #C95EEE;
+}
+
+#Members9832X {
+    width: 80% !important;
+    height: 87% !important;
+    overflow-x: hidden;
+}
+
+#Members9832X::-webkit-scrollbar {
+    display: none;
+}
+
+.Members-Label {
+    font-size: 15px;
+    font-weight: bold;
+    text-indent: 75px;
+    position: relative;
+}
+
+.Members-Label::after, .Members-Label::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    border-radius: 5px;
+    top: 50%;
+}
+
+.Members-Label.FR_Content::after {
+    right: 0;
+    width: 58%;
+    background-color: rgba(201, 94, 238, 0.8);
+}
+
+.Members-Label.FR_Content::before {
+    background-color: rgba(201, 94, 238, 0.8);
+    left: 0;
+    width: 12%;
+}
+
+.Members-Label.M_Content::after {
+    right: 0;
+    width: 66%;
+    background-color: black;
+}
+
+.Members-Label.M_Content::before {
+    background-color: black;
+    left: 0;
+    width: 12%;
+}
+
+#Members9832X > div:first-of-type::after,
+#Members9832X > div:last-of-type::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    border-radius: 5px;
+    width: 100%;
+    bottom: 0;
+    background-color: rgba(201, 94, 238, 0.8);
+}
+
+#Members9832X > div:last-of-type::after {
+    background-color: black;
+}
+
+.MembersCards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(201, 94, 238, 0.1);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.MembersCards > div:first-of-type p {
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 10px !important;
+}
+
+#ChatContent {
+    width: 100%;
+    height: 100%;
+}
+
+#ChatContent #messages {
+    width: 100%;
+    height: 93%;
+    overflow-x: hidden;
+}
+
+#ChatContent #messages::-webkit-scrollbar {
+    display: none;
+}
+
+#ChatContent > div:last-of-type textarea {
+    width: 75%;
+    max-height: 40px;
+    border: 2px solid rgb(201, 94, 238);
+}
+
+#ChatContent > div:last-of-type textarea::placeholder {
+    color: rgb(201, 94, 238);
+}
+
+#ChatContent > div:last-of-type textarea:focus {
+    box-shadow: none;
+}
+
+#ChatContent > div:last-of-type button {
+    width: 20%;
+    background-color: rgb(201, 94, 238);
+    color: white;
+}
+
+#ChatContent #messages p {
+    font-weight: bold;
+    color: white;
+    background-color: rgb(201, 94, 238);
+    width: fit-content;
+    max-width: 510px;
+    padding: 7px 12px;
+    border-radius: 20px;
+    position: relative;
+    right: 0;
+}
+
+#ChatContent #messages svg {
+    fill: rgb(210, 2, 2);
+    cursor: pointer;
+    font-size: 1.3rem;
+    margin-right: 10px;
+}
