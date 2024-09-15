@@ -50,6 +50,10 @@ MongoClient.connect(process.env.MONGO_URL)
         app.locals.db = db;
         app.locals.io = io;
 
+        app.get('/', (req, res) => {
+            return res.status(200).json({ response: "I'm Brahim Azirar" });
+        });
+
         console.log("Connected with mongodb :)");
         server.listen(3500, console.log("Starting the server (http://localhost:3500)"));
     })

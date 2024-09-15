@@ -21,7 +21,6 @@ Client/*.njsproj
 Client/*.sln
 Client/*.sw?
 Client/package-lock.json
-Client/.env
 
 
 Server/node_modules
