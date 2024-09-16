@@ -54,7 +54,8 @@ const login = async (req, res) => {
           maxAge: 1000 * 60 * 60,
           httpOnly: true,
           path: "/",
-          secure: false,
+          secure: true,
+          sameSite: 'None'
         });
         res.status(200).json({ response: "/Account/friends" });
       } else res.status(200).json({ err: "The email or password incorrect !" });
@@ -167,7 +168,8 @@ const EmailIsValid = async (req, res) => {
       maxAge: 1000 * 60 * 60,
       httpOnly: true,
       path: "/",
-      secure: false,
+      secure: true,
+      sameSite: 'None'
     });
     res.redirect(`${process.env.CLIENT_URL}/Account/friends`);
   } catch (error) {
