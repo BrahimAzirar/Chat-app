@@ -7,6 +7,8 @@ const util = require("util");
 const readFileAsync = util.promisify(fs.readFile);
 const VerificationCodes = {};
 
+console.log(__dirname);
+
 function generateVerificationCode() {
   return Math.random().toString(36).substring(2, 8).toUpperCase();
 }
@@ -69,7 +71,7 @@ const login = async (req, res) => {
 const signUp = async (req, res) => {
   try {
     const { db } = req.app.locals;
-    let HTML = await readFileAsync("./public/verifyEmail.html", "utf8");
+    let HTML = await readFileAsync("Public/verifyEmail.html", "utf8");
     const member = {
       ...req.body,
       Password: await bcrypt.hash(req.body.Password, 10),
@@ -102,7 +104,7 @@ const SendVerificationCode = async (req, res) => {
   try {
     const email = req.params.email;
     const verificationCode = generateVerificationCode();
-    let HTML = await readFileAsync("./public/Code.html", "utf8");
+    let HTML = await readFileAsync("Public/Code.html", "utf8");
 
     VerificationCodes[email] = verificationCode;
     HTML = HTML.replace("{ Code }", verificationCode);
@@ -160,9 +162,7 @@ const EmailIsValid = async (req, res) => {
       .updateOne({ Email: data.Email }, { $set: { Email_Verified: true } });
 
     data.Email_Verified = true;
-    const token = await jwt.sign(data, process.env.JWT_KEY, {
-      expiresIn: "1h",
-    });
+    const token = await jwt.sign(data, process.env.JWT_KEY);
 
     res.cookie("auth", token, {
       maxAge: 1000 * 60 * 60,
