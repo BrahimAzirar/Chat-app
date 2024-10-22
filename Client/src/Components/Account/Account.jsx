@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import PropTypes from 'prop-types';
 
 export default function Account({ com }) {
-  const AuthWorker = new Worker("/src/Components/Auth/AuthWorker.js");
+  const AuthWorker = new Worker("/Workers/AuthWorker.js");
   const API_URL = import.meta.env.VITE_API_URL;
   const redirect = useNavigate();
 

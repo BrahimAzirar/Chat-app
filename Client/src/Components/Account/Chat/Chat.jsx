@@ -70,7 +70,7 @@ export default function Chat() {
     <div id="ChatContent">
       <div id="messages">
         {
-          Messages.map(ele => {
+          Messages.length ? Messages.map(ele => {
             if (ele.targetMember) {
               return (
                 <div key={ele._id} className="d-flex align-items-center mb-2">
@@ -85,7 +85,7 @@ export default function Chat() {
                 <p className="m-0">{ele.message}</p>
               </div>
             );
-          })
+          }) : null
         }
       </div>
       <div className="d-flex justify-content-between">

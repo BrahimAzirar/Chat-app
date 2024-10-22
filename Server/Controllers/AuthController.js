@@ -7,8 +7,6 @@ const util = require("util");
 const readFileAsync = util.promisify(fs.readFile);
 const VerificationCodes = {};
 
-console.log(__dirname);
-
 function generateVerificationCode() {
   return Math.random().toString(36).substring(2, 8).toUpperCase();
 }

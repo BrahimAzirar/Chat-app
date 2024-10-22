@@ -5,6 +5,7 @@ const { members } = require("./Routes/MembersRoutes");
 const { FriendsRequests } = require("./Routes/FriendsRequestsRoutes");
 const { chat } = require("./Routes/ChatRoutes");
 const { block } = require("./Routes/BlockFriendsRoutes");
+const { settings } = require("./Routes/SettingsRoutes");
 const cookieParser = require('cookie-parser');
 const cors = require("cors");
 require('dotenv').config();
@@ -22,13 +23,13 @@ const io = require('socket.io')(server, {
 
 app.use(ex.json());
 app.use(cors({ origin: process.env.CLIENT_URL, credentials: true }));
-app.use(ex.json());
 app.use(cookieParser());
 app.use('/authMember', auth);
 app.use('/members', members);
 app.use('/friendsRequests', FriendsRequests);
 app.use('/chat', chat);
 app.use('/block', block);
+app.use('/settings', settings);
 
 io.on('connection', socket => {
     try {

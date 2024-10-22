@@ -36,8 +36,8 @@ const HaveTheAccess = async (req, res, next) => {
       const token = await jwt.verify(auth, process.env.JWT_KEY);
       
       if (token) next();
-      else res.status(200).json({ response: "The session expired :(" });
-    } else res.status(200).json({ response: "The session expired :(" });
+      else res.status(200).json({ err: "The session expired :(" });
+    } else res.status(200).json({ err: "The session expired :(" });
 
   } catch (error) {
     console.log(`The error from AuthMiddleware in HaveTheAccess(): ${error.message}`);
